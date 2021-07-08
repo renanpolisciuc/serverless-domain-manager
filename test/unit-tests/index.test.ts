@@ -792,9 +792,18 @@ describe("Custom Domain Plugin", () => {
             AWS.mock("CloudFormation", "describeStacks", (params, callback) => {
                 callback(null, {
                     Stacks: [
-                        {StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK"},
-                        {StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK"},
-                        {StackName: "outside-stack-NestedStackZERO-U89W84TQIHJK"},
+                        {
+                            StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
+                        {
+                            StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
+                        {
+                            StackName: "outside-stack-NestedStackZERO-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/outside-stack/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
                     ],
                 });
             });
@@ -834,9 +843,18 @@ describe("Custom Domain Plugin", () => {
             AWS.mock("CloudFormation", "describeStacks", (params, callback) => {
                 callback(null, {
                     Stacks: [
-                        {StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK"},
-                        {StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK"},
-                        {StackName: "outside-stack-NestedStackZERO-U89W84TQIHJK"},
+                        {
+                            StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
+                        {
+                            StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
+                        {
+                            StackName: "outside-stack-NestedStackZERO-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/outside-stack/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
                     ],
                 });
             });
@@ -878,9 +896,17 @@ describe("Custom Domain Plugin", () => {
             AWS.mock("CloudFormation", "describeStacks", (params, callback) => {
                 callback(null, {
                     Stacks: [
-                        {StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK"},
-                        {StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK"},
-                        {StackName: "custom-stage-name"},
+                        {
+                            StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
+                        {
+                            StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+                        },
+                        {
+                            StackName: "custom-stage-name"
+                        },
                     ],
                 });
             });
@@ -1081,12 +1107,15 @@ describe("Custom Domain Plugin", () => {
                     Stacks: [
                         {
                             StackName: "custom-stage-name-NestedStackOne-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
                         },
                         {
                             StackName: "custom-stage-name-NestedStackTwo-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/custom-stage-name/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
                         },
                         {
                             StackName: "outside-stack-NestedStackZERO-U89W84TQIHJK",
+                            RootId: "arn:aws:cloudformation:us-east-1:000000000000:stack/outside-stack/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
                         },
                     ],
                 });
